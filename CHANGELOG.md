@@ -521,7 +521,7 @@ Based on stable release 7210.
 * 0ce0f09 prosody: update version
 * 201a1b4 prosody: pin to version 0.11 for now
 * 29b4c23 prosody: use a more recent version of luarocks
-* c5b049a jvb: forward port 8080 to docker host
+* c5b049a jvb: forward port 8088 to docker host
 * 6af7cd8 doc: update CHANGELOG
 * dd7b70b misc: working on latest
 
