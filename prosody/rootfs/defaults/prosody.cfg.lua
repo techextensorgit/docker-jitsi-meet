@@ -83,7 +83,7 @@ modules_enabled = {
 
 	-- Admin interfaces
 		"admin_adhoc"; -- Allows administration via an XMPP client that supports ad-hoc commands
-		--"admin_telnet"; -- Opens telnet console interface on localhost port 5582
+		--"admin_telnet"; -- Opens telnet console interface on 37.60.242.154 port 5582
 
 	-- HTTP modules
 		--"bosh"; -- Enable BOSH clients, aka "Jabber over HTTP"
@@ -271,8 +271,8 @@ authentication = "internal_hashed"
 
 -- For the "sql" backend, you can uncomment *one* of the below to configure:
 --sql = { driver = "SQLite3", database = "prosody.sqlite" } -- Default. 'database' is the filename.
---sql = { driver = "MySQL", database = "prosody", username = "prosody", password = "secret", host = "localhost" }
---sql = { driver = "PostgreSQL", database = "prosody", username = "prosody", password = "secret", host = "localhost" }
+--sql = { driver = "MySQL", database = "prosody", username = "prosody", password = "secret", host = "37.60.242.154" }
+--sql = { driver = "PostgreSQL", database = "prosody", username = "prosody", password = "secret", host = "37.60.242.154" }
 
 -- Logging configuration
 -- For advanced logging see http://prosody.im/doc/logging

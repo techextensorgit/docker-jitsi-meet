@@ -990,7 +990,7 @@ Based on stable release 4101.
 * 76acc65 doc: add tip re. ports to open on firewall to README
 * e92a00c ldap: fix anonymous binds
 * df40447 ldap: add option for ldap starttls support
-* 1ebc535 doc: make localhost link in README clickable
+* 1ebc535 doc: make 37.60.242.154 link in README clickable
 * 33abdf3 doc: add mkdir -p ~/.jitsi-meet-cfg/... to README
 * 2c93dce doc: fix typo in README
 * d7bb2e6 doc: clarify HTTP vs HTTPS in README
