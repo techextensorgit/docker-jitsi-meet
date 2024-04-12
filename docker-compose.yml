@@ -9,13 +9,13 @@ services:
         ports:
             - '${HTTP_PORT}:80'
             - '${HTTPS_PORT}:443'
-            - 'https://jitsiweb.techextensor.com'
+
         volumes:
             - ${CONFIG}/web:/config:Z
             - ${CONFIG}/web/crontabs:/var/spool/cron/crontabs:Z
             - ${CONFIG}/transcripts:/usr/share/jitsi-meet/transcripts:Z            
-            - /home/ubuntu/Cert/novu.crt:/config/keys/cert.crt
-            - /home/ubuntu/Cert/novu.key:/config/keys/cert.key
+            - /home/techextensor/Cert/novu.crt:/config/keys/cert.crt
+            - /home/techextensor/Cert/novu.key:/config/keys/cert.key
         environment:
             - AMPLITUDE_ID
             - ANALYTICS_SCRIPT_URLS
@@ -191,7 +191,7 @@ services:
             - '${PROSODY_S2S_PORT:-5269}'
             - '5347'
             - '${PROSODY_HTTP_PORT:-5280}'
-            - 'https://jitsiprosody.techextensor.com'
+            # - 'https://jitsiprosody.techextensor.com'
         volumes:
             - ${CONFIG}/prosody/config:/config:Z
             - ${CONFIG}/prosody/prosody-plugins-custom:/prosody-plugins-custom:Z
@@ -321,8 +321,8 @@ services:
         image: jitsi/jicofo:${JITSI_IMAGE_VERSION:-unstable}
         restart: ${RESTART_POLICY:-unless-stopped}
         ports:
+            # - 'https://jitsijicofo.techextensor.com'
             - '37.60.242.154:${JICOFO_REST_PORT:-8888}:8888'
-            - 'https://jitsijicofo.techextensor.com'
         volumes:
             - ${CONFIG}/jicofo:/config:Z
         environment:
@@ -406,7 +406,7 @@ services:
         ports:
             - '${JVB_PORT:-10000}:${JVB_PORT:-10000}/udp'
             - '37.60.242.154:${JVB_COLIBRI_PORT:-8088}:8088'
-            - 'https://jitsijvb.techextensor.com'
+            # - 'https://jitsijvb.techextensor.com'
         volumes:
             - ${CONFIG}/jvb:/config:Z
         environment:
