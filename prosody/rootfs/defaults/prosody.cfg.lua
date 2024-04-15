@@ -15,7 +15,7 @@
 {{ $PROSODY_HTTP_PORT := .Env.PROSODY_HTTP_PORT | default "5280" -}}
 {{ $PROSODY_ADMINS := .Env.PROSODY_ADMINS | default "" -}}
 {{ $PROSODY_ADMIN_LIST := splitList "," $PROSODY_ADMINS -}}
-{{ $TRUSTED_PROXIES := .Env.PROSODY_TRUSTED_PROXIES | default "37.60.242.154,::1" -}}
+{{ $TRUSTED_PROXIES := .Env.PROSODY_TRUSTED_PROXIES | default "185.100.212.51,::1" -}}
 {{ $TRUSTED_PROXY_LIST := splitList "," $TRUSTED_PROXIES -}}
 {{ $PROSODY_S2S_LIMIT := .Env.PROSODY_S2S_LIMIT | default "30kb/s" -}}
 {{ $S2S_PORT := .Env.PROSODY_S2S_PORT | default "5269" }}
@@ -83,7 +83,7 @@ modules_enabled = {
 
 	-- Admin interfaces
 		"admin_adhoc"; -- Allows administration via an XMPP client that supports ad-hoc commands
-		--"admin_telnet"; -- Opens telnet console interface on 37.60.242.154 port 5582
+		--"admin_telnet"; -- Opens telnet console interface on 185.100.212.51 port 5582
 
 	-- HTTP modules
 		--"bosh"; -- Enable BOSH clients, aka "Jabber over HTTP"
@@ -271,8 +271,8 @@ authentication = "internal_hashed"
 
 -- For the "sql" backend, you can uncomment *one* of the below to configure:
 --sql = { driver = "SQLite3", database = "prosody.sqlite" } -- Default. 'database' is the filename.
---sql = { driver = "MySQL", database = "prosody", username = "prosody", password = "secret", host = "37.60.242.154" }
---sql = { driver = "PostgreSQL", database = "prosody", username = "prosody", password = "secret", host = "37.60.242.154" }
+--sql = { driver = "MySQL", database = "prosody", username = "prosody", password = "secret", host = "185.100.212.51" }
+--sql = { driver = "PostgreSQL", database = "prosody", username = "prosody", password = "secret", host = "185.100.212.51" }
 
 -- Logging configuration
 -- For advanced logging see http://prosody.im/doc/logging

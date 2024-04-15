@@ -25,7 +25,7 @@
 {{ $ENABLE_JAAS_COMPONENTS := .Env.ENABLE_JAAS_COMPONENTS | default "0" | toBool -}}
 {{ $ENABLE_RATE_LIMITS := .Env.PROSODY_ENABLE_RATE_LIMITS | default "0" | toBool -}}
 {{ $GUEST_AUTH_TYPE := .Env.PROSODY_GUEST_AUTH_TYPE | default "jitsi-anonymous" -}}
-{{ $PUBLIC_URL := .Env.PUBLIC_URL | default "https://37.60.242.154:8443" -}}
+{{ $PUBLIC_URL := .Env.PUBLIC_URL | default "https://185.100.212.51:8443" -}}
 {{ $PUBLIC_URL_DOMAIN := $PUBLIC_URL | trimPrefix "https://" | trimSuffix "/" -}}
 {{ $STUN_HOST := .Env.STUN_HOST | default "" -}}
 {{ $STUN_PORT := .Env.STUN_PORT | default "443" -}}
@@ -362,7 +362,7 @@ Component "{{ $XMPP_MUC_DOMAIN }}" "muc"
     rate_limit_timeout = {{ $RATE_LIMIT_TIMEOUT }};
     -- List of regular expressions for IP addresses that are not limited by this module.
     rate_limit_whitelist = {
-        "37.60.242.154";
+        "185.100.212.51";
 {{ range $index, $cidr := (splitList "," $RATE_LIMIT_ALLOW_RANGES) }}
         "{{ $cidr }}";
 {{ end }}

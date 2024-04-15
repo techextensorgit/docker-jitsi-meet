@@ -182,7 +182,7 @@ Component '{{ $VISITORS_MUC_PREFIX }}.v{{ $VISITOR_INDEX }}.{{ $VISITORS_XMPP_DO
 	rate_limit_timeout = {{ $RATE_LIMIT_TIMEOUT }};
 	-- List of regular expressions for IP addresses that are not limited by this module.
 	rate_limit_whitelist = {
-      "37.60.242.154";
+      "185.100.212.51";
       {{ range $index, $cidr := (splitList "," $RATE_LIMIT_ALLOW_RANGES) -}}
       "{{ $cidr }}";
       {{ end -}}
