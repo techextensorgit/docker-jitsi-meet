@@ -13,9 +13,8 @@ services:
         volumes:
             - ${CONFIG}/web:/config:Z
             - ${CONFIG}/web/crontabs:/var/spool/cron/crontabs:Z
-            - ${CONFIG}/transcripts:/usr/share/jitsi-meet/transcripts:Z            
-            - /home/techextensor/Cert/novu.crt:/config/keys/cert.crt
-            - /home/techextensor/Cert/novu.key:/config/keys/cert.key
+            - ${CONFIG}/transcripts:/usr/share/jitsi-meet/transcripts:Z                        
+            - /home/ubuntu/jitsi/docker-jitsi-meet/sslKey:/config/keys
         environment:
             - AMPLITUDE_ID
             - ANALYTICS_SCRIPT_URLS
