@@ -4,7 +4,7 @@
 {{ $ENABLE_GUESTS := .Env.ENABLE_GUESTS | default "false" | toBool -}}
 {{ $ENABLE_SUBDOMAINS := .Env.ENABLE_SUBDOMAINS | default "true" | toBool -}}
 {{ $ENABLE_XMPP_WEBSOCKET := .Env.ENABLE_XMPP_WEBSOCKET | default "1" | toBool -}}
-{{ $PUBLIC_URL_DOMAIN := .Env.PUBLIC_URL | default "https://185.100.212.51:8443" | trimPrefix "https://" | trimSuffix "/" -}}
+{{ $PUBLIC_URL_DOMAIN := .Env.PUBLIC_URL | default "https://194.61.31.166:8443" | trimPrefix "https://" | trimSuffix "/" -}}
 {{ $XMPP_AUTH_DOMAIN := .Env.XMPP_AUTH_DOMAIN | default "auth.meet.jitsi" -}}
 {{ $XMPP_DOMAIN := .Env.XMPP_DOMAIN | default "meet.jitsi" -}}
 {{ $XMPP_GUEST_DOMAIN := .Env.XMPP_GUEST_DOMAIN | default "guest.meet.jitsi" -}}

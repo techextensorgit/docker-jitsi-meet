@@ -321,7 +321,7 @@ services:
         restart: ${RESTART_POLICY:-unless-stopped}
         ports:
             # - 'https://jitsijicofo.techextensor.com'
-            - '185.100.212.51:${JICOFO_REST_PORT:-8888}:8888'
+            - '194.61.31.166:${JICOFO_REST_PORT:-8888}:8888'
         volumes:
             - ${CONFIG}/jicofo:/config:Z
         environment:
@@ -404,7 +404,7 @@ services:
         restart: ${RESTART_POLICY:-unless-stopped}
         ports:
             - '${JVB_PORT:-10000}:${JVB_PORT:-10000}/udp'
-            - '185.100.212.51:${JVB_COLIBRI_PORT:-8088}:8088'
+            - '194.61.31.166:${JVB_COLIBRI_PORT:-8088}:8088'
             # - 'https://jitsijvb.techextensor.com'
         volumes:
             - ${CONFIG}/jvb:/config:Z

@@ -52,7 +52,7 @@ if [ -n "$AUTOSCALER_URL" ]; then
         export JIBRI_VERSION="$(dpkg -s jibri | grep Version | awk '{print $2}' | sed 's/..$//')"
 
         [ -z "$AUTOSCALER_SIDECAR_PORT" ] && export AUTOSCALER_SIDECAR_PORT="6000"
-        [ -z "$JIBRI_WEBHOOK_SUBSCRIBERS" ] && export JIBRI_WEBHOOK_SUBSCRIBERS="http://185.100.212.51:$AUTOSCALER_SIDECAR_PORT/hook"
+        [ -z "$JIBRI_WEBHOOK_SUBSCRIBERS" ] && export JIBRI_WEBHOOK_SUBSCRIBERS="http://194.61.31.166:$AUTOSCALER_SIDECAR_PORT/hook"
         [ -z "$AUTOSCALER_SIDECAR_INSTANCE_ID" ] && export AUTOSCALER_SIDECAR_INSTANCE_ID="$JIBRI_INSTANCE_ID"
         [ -z "$AUTOSCALER_SIDECAR_REGION" ] && export AUTOSCALER_SIDECAR_REGION="docker"
         [ -z "$AUTOSCALER_SIDECAR_GROUP_NAME" ] && export AUTOSCALER_SIDECAR_GROUP_NAME="docker-jibri"
